@@ -49,7 +49,10 @@ $division = $op->division($numeros);
 			data: {"num1": num1, "num2": num2}
 		}).done(function(res){
 			$("#div_res").append(
-			
+				"La suma de los numeros es: <?php echo $suma;?>"+ "<br>"
+				"La resta de los numeros es: <?php echo $resta;?>" +"<br>"
+				"El producto de los numeros es: <?php echo $producto;?>" +"<br>"
+				"La division de los numeros es: <?php echo $division;?>"
 			);
 		})
 	}
