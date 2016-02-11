@@ -54,24 +54,26 @@ $division = $op->division($numeros);
 		})
 	}
 </script>
-<label>
-	numero 1:
-</label>
-<input type="text" id="txt_num1"/>
-<label>
-	numero 2:
-</label>
-
-<input type="text" id="txt_num2"/>
-
-<select id="sel1">
+<body>
+	<label>
+		numero 1:
+	</label>
+	<input type="text" id="txt_num1"/>
+	<label>
+		numero 2:
+	</label>
 	
-</select>
-
-<input type="button" id="btn_res" />
-
-<div id="div_res">
+	<input type="text" id="txt_num2"/>
 	
-</div>
+	<select id="sel1">
+		
+	</select>
+	
+	<input type="button" id="btn_res" />
+	
+	<div id="div_res">
+		
+	</div>
+</body>
 </html>
 
