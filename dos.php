@@ -1,10 +1,11 @@
 <html>
 <head>
-<title>Title of the document</title>
+<title>JS CURP</title>
 </head>
 
 <body>
-The content of the document......
+
+data curp
 </body>
 
 </html>
