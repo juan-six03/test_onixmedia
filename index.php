@@ -1,7 +1,5 @@
 
 <html>
-
-
 <head>
 <script src="jquery-1.12.0.min.js"></script>
 	<script>
@@ -11,8 +9,14 @@
 		"multiplicacion": 3,
 		"division": 4
 	}
+	function onErrorShow(msg){
+		console.log(msg);
+	}
 	function getRes(){
 	debugger;
+		/*limpiar div res*/
+		$("#div_res").text("");
+
 		num1 = $("#txt_num1").val();
 		num2 = $("#txt_num1").val();
 		$.ajax({ 
@@ -26,10 +30,14 @@
 			success: function(output) {    
 				debugger;
 				var res = JSON.parse(output);
-				
+				if(res.onError){
+					onErrorShow(res.msg);
+					return;
+				}
+				$("#div_res").text( res.data);
 			}
 		});
-		$("#div_res").text( <?php echo "'text'"; ?> );
+		
 		
 	}
 function myFunction() {
