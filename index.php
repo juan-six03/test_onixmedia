@@ -1,7 +1,3 @@
-<?php 
-	include ("controller.php");
-	$op = new basicOperation ();
-?>
 
 <html>
 
@@ -9,22 +5,30 @@
 <head>
 <script src="jquery-1.12.0.min.js"></script>
 	<script>
+	var operaciones_fundamentales = {
+		"suma" : 1,
+		"resta": 2,
+		"multiplicacion": 3,
+		"division": 4
+	}
 	function getRes(){
-	
+	debugger;
 		num1 = $("#txt_num1").val();
 		num2 = $("#txt_num1").val();
-		<?php
-
-			$numeros = [ 
-						"num1" => 10,
-						"num2" => 15 
-			];
-
-			$op->suma ( $numeros );
-			$op->resta ( $numeros );
-			$op->producto ( $numeros );
-			$op->division ( $numeros );
-		?>
+		$.ajax({ 
+			url: 'model.php',
+			data: {
+				"num1": $("#txt_num1").val(),
+				"num2": $("#txt_num2").val(),
+				"typeOp": $("#sel_typeOp").val()
+			},
+			type: 'post',
+			success: function(output) {    
+				debugger;
+				var res = JSON.parse(output);
+				
+			}
+		});
 		$("#div_res").text( <?php echo "'text'"; ?> );
 		
 	}
@@ -40,14 +44,17 @@ function myFunction() {
 
 	<input type="text" id="txt_num2" />
 
-	<select id="sel1">
+	<select id="sel_typeOp">
+		<option value=1>Suma</option>
+		<option value=2>Resta</option>
+		<option value=3>Producto</option>
+		<option value=4>Division</option>
 
 	</select>
 
 	<button onclick="getRes()">Click me</button>
 
 	<div id="div_res">
-		
 
 	</div>
 
