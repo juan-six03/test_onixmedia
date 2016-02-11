@@ -1,65 +1,60 @@
-
+<?php 
+	include ("controller.php");
+	$op = new basicOperation ();
+?>
 
 <html>
-	
+
 
 <head>
-	<script src="jquery-1.12.0.min.js"></script>
-</head>
-<body>
-	<label>
-		numero 1:
-	</label>
-	<input type="text" id="txt_num1"/>
-	<label>
-		numero 2:
-	</label>
+<script src="jquery-1.12.0.min.js"></script>
+	<script>
+	function getRes(){
 	
-	<input type="text" id="txt_num2"/>
-	
-	<select id="sel1">
-		
-	</select>
-	
-	<button onclick="getRes()">Click me</button>
+		num1 = $("#txt_num1").val();
+		num2 = $("#txt_num1").val();
+		<?php
 
-	<div id="div_res">
-		
-<?php
-	
-				include("controller.php");
-				
-				$numeros = [
-					"num1" => 10,
-					"num2" => 15
-				];
-				
-				$op = new basicOperation();
-				$op->suma($numeros);
-				$op->resta($numeros);
-				$op->producto($numeros);
-				$op->division($numeros);
-?>
-	</div>
-	
-	
-	<button onclick="myFunction()">Try it</button>
+			$numeros = [ 
+						"num1" => 10,
+						"num2" => 15 
+			];
 
-<script>
-function getRes(){
-		num1 = document.getElementById("txt_num1").value;
-		num2 = document.getElementById("txt_num1").value;
-		alert(num1);
-		document.getElementById("div_res").innerHTML = "
-			<?php
-	echo "text";?>
-		";
+			$op->suma ( $numeros );
+			$op->resta ( $numeros );
+			$op->producto ( $numeros );
+			$op->division ( $numeros );
+		?>
+		$("#div_res").text( <?php echo "'text'"; ?> );
 		
 	}
 function myFunction() {
     alert("Hello! I am an alert box!");
 }
 </script>
+</head>
+<body>
+	<label> numero 1: </label>
+	<input type="text" id="txt_num1" />
+	<label> numero 2: </label>
+
+	<input type="text" id="txt_num2" />
+
+	<select id="sel1">
+
+	</select>
+
+	<button onclick="getRes()">Click me</button>
+
+	<div id="div_res">
+		
+
+	</div>
+
+
+	<button onclick="myFunction()">Try it</button>
+
+
 </body>
 </html>
 
