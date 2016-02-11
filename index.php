@@ -1,39 +1,11 @@
+
+
 <html>
 	
-<?php
 
-include("controller.php");
-
-$numeros = [
-	"num1" => 10,
-	"num2" => 15
-];
-
-$op = new basicOperation();
-$op->suma($numeros);
-$op->resta($numeros);
-$op->producto($numeros);
-$op->division($numeros);
-?>
-
-<script type="text/javascript">
-	function getRes(){
-		num1 = $("#txt_num1").val();
-		num2 = $("#txt_num2").val();
-		
-		$.ajax({
-			url: '',
-			data: {"num1": num1, "num2": num2}
-		}).done(function(res){
-			$("#div_res").append(
-				"La suma de los numeros es: <?php echo $suma;?>"+ "<br>"
-				"La resta de los numeros es: <?php echo $resta;?>" +"<br>"
-				"El producto de los numeros es: <?php echo $producto;?>" +"<br>"
-				"La division de los numeros es: <?php echo $division;?>"
-			);
-		})
-	}
-</script>
+<head>
+	<script src="jquery-1.12.0.min.js"></script>
+</head>
 <body>
 	<label>
 		numero 1:
@@ -49,11 +21,45 @@ $op->division($numeros);
 		
 	</select>
 	
-	<input type="button" id="btn_res" />
-	
+	<button onclick="getRes()">Click me</button>
+
 	<div id="div_res">
 		
+<?php
+	
+				include("controller.php");
+				
+				$numeros = [
+					"num1" => 10,
+					"num2" => 15
+				];
+				
+				$op = new basicOperation();
+				$op->suma($numeros);
+				$op->resta($numeros);
+				$op->producto($numeros);
+				$op->division($numeros);
+?>
 	</div>
+	
+	
+	<button onclick="myFunction()">Try it</button>
+
+<script>
+function getRes(){
+		num1 = document.getElementById("txt_num1").value;
+		num2 = document.getElementById("txt_num1").value;
+		alert(num1);
+		document.getElementById("div_res").innerHTML = "
+			<?php
+	echo "text";?>
+		";
+		
+	}
+function myFunction() {
+    alert("Hello! I am an alert box!");
+}
+</script>
 </body>
 </html>
 
