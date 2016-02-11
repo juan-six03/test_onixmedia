@@ -1,3 +1,4 @@
+<?php
 class basicOperation {
 
         public function __constructor(){
@@ -37,17 +38,18 @@ class basicOperation {
         		$res = 0;
         	foreach($array_numbers as $ele){
                 	if(!is_numeric($ele)){
-						throw Exception("Imposible realizar division, {$ele} no es un numero.");
-					}
-             }
+				throw Exception("Imposible realizar division, {$ele} no es un numero.");
+			}
+             	}
 			
-			try{
+		try{
 				$res = $array_numbers["num1"] / $array_numbers["num2"];
         	}catch(Exception $e){
         		echo "No es posible realizar division entre 0";
         	}
         	echo "La division de los numeros introducidos es:{$res}";
-		}
+	}
 
 }
 
+?>
