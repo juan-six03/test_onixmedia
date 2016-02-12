@@ -65,18 +65,18 @@
 			</select>
 			<br>
 			<button class="btn btn-primary btn-lg" type="submit" onclick="getRes()" data-toggle="modal"  data-target="#modal_resultado">Obtener resultado</button>
+		</div>
 
-
-			<div id="modal_resultado" class="modal fade" tabindex="-1" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-					<div id="div_res" class="modal-body">
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-					</div>
-					</div><!-- /.modal-content -->
-					</div><!-- /.modal-dialog -->
+		<div id="modal_resultado" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div id="div_res" class="modal-body">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+				</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 	</body>
 </html>
