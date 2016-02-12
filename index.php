@@ -18,12 +18,14 @@
 				$("#div_res").text("");
 
 				num1 = $("#txt_num1").val();
-				num2 = $("#txt_num1").val();
+				num2 = $("#txt_num2").val();
+				num1 = (num1 === '' ? 0 : num1);
+				num2 = (num2 === '' ? 0 : num2);
 				$.ajax({ 
 					url: 'model.php',
 					data: {
-						"num1": $("#txt_num1").val(),
-						"num2": $("#txt_num2").val(),
+						"num1": num1,
+						"num2": num2,
 						"typeOp": $("#sel_typeOp").val()
 					},
 					type: 'post',
