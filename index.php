@@ -77,9 +77,9 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 				</div>
-				</div><!-- /.modal-content -->
-				</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+				</div>
+				</div>
+		</div>
 	</body>
 </html>
 
