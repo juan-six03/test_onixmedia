@@ -79,7 +79,7 @@
 				return (mi_curp.obtenerCURP());
 			}
 			
-			$( "input[type='text']" ).keypress(function() {
+			$( "input[type='text']" ).keyup(function() {
 				$("#txt_curp").val(build_CURP());
 			});
 			$("input[type='text']").change(function(a,bc){
