@@ -32,7 +32,7 @@ class basicOperation {
 			}
              	}
 		$res =  $array_numbers["num1"] * $array_numbers["num2"];
-		return "La resta de los numeros introducidos es: {$res}";
+		return "El producto de los numeros introducidos es: {$res}";
 	}
         public function division($array_numbers){
 		$res = 0;

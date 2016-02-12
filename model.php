@@ -31,7 +31,7 @@
 		}
 	} catch (Exception $e) {
 		$res["onError"] = true;
-		$res["msg"] = json_encode($e->getMessage());	
+		$res["msg"] = $e->getMessage();	
 	}finally{
 		echo json_encode($res);
 	}
